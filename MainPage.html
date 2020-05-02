@@ -1,0 +1,272 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384
+    -
+    ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <style>
+        .card:hover {
+            -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+        }
+        
+        body {
+            background-image: url('img/Screenshot from 2020-04-29 16-00-33.png');
+        }
+        
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            filter: invert(200);
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="popover"]').popover({
+                placement: 'bottom',
+                trigger: 'hover'
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#myModal").modal('show');
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Welcome to Country gate</h4>
+                </div>
+                <div class="modal-body">
+                    <p> Here you can find the landmarks of each country and historical information about it ..</p>
+                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal" aria-hidden="true">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center text-black mt-3 font-italic font-weight-bold"> Country Gate</h1>
+
+                <div id="inam" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row mt-5">
+                                    <div class="col-sm-12 col-lg-4">
+                                        <div class="card" data-toggle="popover" data-content="Cairo is the capital of Egypt and the largest city in the Arab world.Cairo is associated with ancient Egypt, as the famous Giza pyramid complex and the ancient city of Memphis are located in its geographical area. Located near the Nile Delta."
+                                            style="width: 300px; margin: auto;">
+                                            <div class="card-header text-center text-black bg-warning">
+                                                Egypt
+                                            </div>
+                                            <img src="img/Cairo.jpg" class="card-img-top">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Pyramids</li>
+                                                    <li>Egyptian Museum</li>
+                                                    <li>Karnak Temple</li>
+                                                </ul>
+                                                <a href="Country_Egypt.html" class="btn btn-info ml-5" role="button">Visit</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <div class="card" data-toggle="popover" data-content="France is the capital and most populous city of France, with a population of 2,148,271 residents Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, science and arts."
+                                            style="width: 300px; margin: auto; ">
+                                            <div class="card-header text-center text-black bg-warning">
+                                                France
+                                            </div>
+                                            <img src="img/Paris.jpeg" height="220px" class="card-img-top">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Eiffel Tower</li>
+                                                    <li>Louvre Museum</li>
+                                                    <li>Musée d'Orsay</li>
+                                                </ul>
+                                                <a href="Country_France.html" class="btn btn-info ml-5 role=" button ">Visit</a>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-12 col-lg-4 ">
+                    <div class="card " data-toggle="popover "
+                      data-content="Rome is the capital city and a special comune of Italy The city has been a major human settlement for over two millennia. With 2,844,395 residents "
+                      style="width: 300px;margin: auto; ">
+                      <div class="card-header text-center text-black bg-warning ">
+                        Rome
+                      </div>
+                      <img src="img/Rome.jpg " height="220px " class="card-img-top ">
+                      <div class="card-body ">
+                        <ul>
+                          <li>Colosseum</li>
+                          <li>St. Peter's Basilica</li>
+                          <li>Vatican Museums</li>
+                        </ul>
+                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total& "
+                          class="btn btn-info ml-5 " role="button ">Visit</a>
+
+                      </div>
+
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+            <div class="carousel-item ">
+              <div class="container ">
+                <div class="row row mt-5 ">
+                  <div class="col-sm-12 col-lg-4 ">
+                    <div class="card " data-toggle="popover "
+                      data-content="Germany is a country in Central and Western Europe. It lies between the Baltic and North seas to the north, and the Alps to the south. "
+                      style="width: 300px; margin: auto; ">
+                      <div class="card-header text-center text-black bg-warning ">
+                        Germany
+                      </div>
+                      <img src="img/Germany.jpg " height="220px " class="card-img-top ">
+                      <div class="card-body ">
+                        <ul>
+                          <li>Neuschwanstein Castle</li>
+                          <li>Brandenburg Gate</li>
+                          <li>Reichstag Building</li>
+                        </ul>
+                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total& "
+                          class="btn btn-info ml-5 " role="button ">Visit</a>
+
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-12 col-lg-4 ">
+                    <div class="card " data-toggle="popover "
+                      data-content="Russia is a transcontinental country located in Eastern Europe and Northern Asia. It is the largest country in the world by area, spanning more than one-eighth of the Earth 's inhabited land area."
+                      style="width: 300px; margin: auto; ">
+                      <div class="card-header text-center text-black bg-warning">
+                        Russia
+                      </div>
+                      <img src="img/Russia.jpeg" height="220px" class="card-img-top">
+                      <div class="card-body">
+                        <ul>
+                          <li>Red Square</li>
+                          <li>The Moscow Kremlin</li>
+                          <li>Russian Museum</li>
+                        </ul>
+                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total&"
+                          class="btn btn-info ml-5" role="button">Visit</a>
+
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-12 col-lg-4">
+                    <div class="card" data-toggle="popover"
+                      data-content="Spain  is a country in Southwestern Europe with some pockets of territory across the Strait of Gibraltar and the Atlantic Ocean."
+                      style="width: 300px; margin: auto;">
+                      <div class="card-header text-center text-black bg-warning">
+                        Spain
+                      </div>
+                      <img src="img/Spain.png"  height="220px" class="card-img-top">
+                      <div class="card-body">
+                        <ul>
+                          <li>La Sagrada Familia</li>
+                          <li>Alhambra</li>
+                          <li>Park Güell</li>
+                        </ul>
+                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total&"
+                          class="btn btn-info ml-5" role="button">Visit</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+          <a href="#inam" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#inam" class="carousel-control-next " data-slide="next">
+            <span class="carousel-control-next-icon "></span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Scripts -->
+
+  <!--Model callig-->
+  <script>
+    $(window).on('load ', function () {
+      $('#WelcomeModal ').modal('show ');
+    });
+  </script>
+
+  <script>
+
+    $(document).ready(function () {
+      console.log("document is ready");
+
+
+      $(".col-sm-6 col-md-4 col-lg-3").hover(
+        function () {
+          $(this).addClass('shadow-lg ').css('cursor ', 'pointer ');
+        }, function () {
+          $(this).removeClass('shadow-lg ');
+        }
+      );
+    });
+
+  </script>
+  <script src="https://code.jquery.com/jquery
+-3.3.1.slim.min.js" integrity="sha384
+-
+q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384
+-
+UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384
+-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
