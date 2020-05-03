@@ -1,0 +1,79 @@
+.addReview {
+    display: block;
+    float: right;
+    margin-bottom: 1rem;
+    background-color: #64a19d;
+    color: white;
+
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    font-family: 'Varela Round';
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    border: 0;
+}
+
+.btn:hover {
+    background-color: #4f837f;
+}
+
+.btn:focus {
+    background-color: #4f837f;
+    color: white;
+}
+
+
+.reviews h2 {
+    font-family: "Varela Round";
+}
+
+.reviews {
+    font-size: smaller;
+}
+
+.sights img {
+    border-radius: 10px;
+    height: 15rem;
+    width: 22.5rem;
+}
+
+.featured-text {
+    padding: 2rem;
+    font-size: larger;
+    margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+    .featured-text {
+        padding: 0 0 0 1rem;
+        border-left: 0.5rem solid #64a19d;
+    }
+}
+
+.header {
+    /* background-image: url("./img/background.jpg"); */
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 50%,rgba(22, 22, 22, 0.5) 75%, #161616 100%),
+        url("./img/background.jpg");
+    display: flex;
+    height: 80%;
+    width: 97%;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    /* margin-top: 1%;*/
+    margin-left: 1.5%; 
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Varela Round';
+    font-size: 4.5rem;
+    letter-spacing: 0.8rem;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.999), rgba(255, 255, 255, 0.6));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

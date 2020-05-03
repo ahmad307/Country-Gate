@@ -1,15 +1,18 @@
 <html>
     <head>
-        <title></title>
+        <title>Sight</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- File stylesheet -->
+        <link rel="stylesheet" href="sight.css">
     </head>
     <body>
         <div class="header">
-            <div class="header-text">
-                <h1>Broklyn Bridge</h1>
-            </div>
+            <h1>Broklyn Bridge</h1>
         </div>
 
         <br><br>
@@ -44,7 +47,7 @@
                     <h2>Reviews</h2>
                 </div>
             </div>
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5 sights">
+            <div id="reviews" class="row align-items-center no-gutters mb-4 mb-lg-5">
                 <div class="col-xl-10 col-lg-5">
                     <div class="featured-text text-center text-lg-left">
                         <h5>Mohamad Rashad</h5>
@@ -62,65 +65,52 @@
                     </div>
                 </div>
             </div>    
+            <button type="button" class="btn addReview" data-toggle="modal" data-target="#addReviewModal">Add Your Review</button>
         </div>
+
+        <!-- Add review modal -->
+        <div class="modal fade" id="addReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add Your Review</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <label for="userReview">Your Review</label>
+                    <textarea id="userReview" name="userReview" type="text" placeholder="What do you think about this sight?" class="form-control"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button id="closeModalBtn" class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                  <a id="submitReviewBtn" class="btn" style="color: white; background-color: #64a19d;">Add Review</a>
+                </div>
+              </div>
+            </div>
+          </div>
     </body>
-    <style>
-        .reviews h2 {
-            font-family: "Varela Round";
-        }
+    <script>
+        $(document).ready(function() {
+            $("#submitReviewBtn").on("click", function() {
+                const userName = "Ahmad Hussain";
+                const userReview = $("#userReview").val();
 
-        .reviews {
-            font-size: smaller;
-        }
+                $("#reviews").append(`
+                    <div class="col-xl-10 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h5>${userName}</h5>
+                            <p class="text-black-50 mb-0">
+                                ${userReview}
+                            </p>
+                        </div>
+                    </div>
+                `);
 
-        .sights img {
-            border-radius: 10px;
-            height: 15rem;
-            width: 22.5rem;
-        }
-
-        .featured-text {
-            padding: 2rem;
-            font-size: larger;
-            margin-top: 1rem;
-        }
-
-        @media (min-width: 992px) {
-            .featured-text {
-                padding: 0 0 0 1rem;
-                border-left: 0.5rem solid #64a19d;
-            }
-        }
-
-        .header {
-            /* background-image: url("./img/background.jpg"); */
-            background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 50%,rgba(22, 22, 22, 0.5) 75%, #161616 100%),
-              url("./img/background.jpg");
-            display: flex;
-            height: 80%;
-            width: 97%;
-            border-radius: 15px;
-            background-position: center;
-            background-size: cover;
-            /* margin-top: 1%;*/
-            margin-left: 1.5%; 
-        }
-
-        .header-text {
-            display: flex;
-            flex: 1;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .header-text h1 {
-            font-family: 'Varela Round';
-            font-size: 4.5rem;
-            letter-spacing: 0.8rem;
-            background: -webkit-linear-gradient(rgba(255, 255, 255, 0.999), rgba(255, 255, 255, 0.6));
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-        }
-    </style>
+                // Close modal and clean input field
+                $("#userReview").val("");
+                $("#closeModalBtn").click();
+            });
+        });
+    </script>
 </html>
