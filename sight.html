@@ -12,14 +12,6 @@
         <link rel="stylesheet" href="css/sight.css">
     </head>
     <body>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" display="inline-block;">
-                <li class="breadcrumb-item" display="inline-block;"><a href="MainPage.html">Home</a></li>
-                <li class="breadcrumb-item" display="inline-block;"><a href="#">Country</a></li>
-                <li class="breadcrumb-item" display="inline-block;"><a href="#">Sight</a></li>
-                <li class="breadcrumb-item active" aria-current="page" display="inline-block;">...</li>
-            </ol>
-        </nav> -->
         <!-- Breadcrumb -->
         <div class="container">
             <div class="vertical">
@@ -66,8 +58,8 @@
             </div>
             <div id="feedbackSection" class="row" style="margin-left: 0.5rem;">
                 <h6>Was this info helpful?</h6>
-                <button id="goodBtn" class="btn btn-success experienceButton">Yes</button>
-                <button id="badBtn" class="btn btn-danger experienceButton" style="margin-left: 0.5rem;">No</button>
+                <button class="btn btn-success experienceButton">Yes</button>
+                <button class="btn btn-danger experienceButton" style="margin-left: 0.5rem;">No</button>
                 <p id="feedbackMessage" style="display: none; margin-left: 1rem;">Thank you for your feedback!</p>
             </div>
             <br><br>
@@ -98,7 +90,9 @@
                     </div>
                 </div>
             </div>    
-            <button type="button" class="btn addReview" data-toggle="modal" data-target="#addReviewModal">Add Your Review</button>
+            <button type="button" class="btn addReview" data-toggle="modal" data-target="#addReviewModal">
+                Add Your Review
+            </button>
         </div>
 
         <!-- Add review modal -->
