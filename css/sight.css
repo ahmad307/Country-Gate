@@ -69,13 +69,13 @@
     background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 50%,rgba(22, 22, 22, 0.5) 75%, #161616 100%),
         url("../img/background.jpg");
     display: flex;
-    height: 80%;
-    width: 97%;
-    border-radius: 15px;
+    height: 88%;
+    width: 99%;
+    border-radius: 10px;
     background-position: center;
     background-size: cover;
-    /* margin-top: 1%;*/
-    margin-left: 1.5%; 
+    margin-top: 0.5%;
+    margin-left: 0.6%;
 
     justify-content: center;
     align-items: center;
@@ -92,20 +92,8 @@
 }
 
 /* Vertical Breadcrumb */
-.vertical h1 {
-    font-family: Northwell, display, serif;
-    color: #fff;
-    padding: 0;
-    margin: 0;
-    font-size: calc(90px + 12 * ((100vw - 320px) / 1140));
-    line-height: 1;
-    font-weight: normal;
-    align-self: center;
-    padding-bottom: 40vh;
-    max-width: 34rem;
-}
 .vertical {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.025rem;
     color: #fff;
     position: absolute;
@@ -117,6 +105,20 @@
             transform-origin: 0 0;
     /* color: rgba(255,255,255,0.5); */
     color: #64a19d;
+    margin-left: -1.3rem;
+    margin-bottom: 1rem;
+}
+.vertical h1 {
+    font-family: Northwell, display, serif;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: calc(90px + 12 * ((100vw - 320px) / 1140));
+    line-height: 1;
+    font-weight: normal;
+    align-self: center;
+    padding-bottom: 40vh;
+    max-width: 34rem;
 }
 .vertical a {
     color: inherit;

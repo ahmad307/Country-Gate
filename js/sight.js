@@ -1,6 +1,14 @@
+function heartFlip() {
+    var className = $("#heartIcon").attr("class");
+    if (className === "far fa-heart"){
+        $("#heartIcon").attr("class", "fa fa-heart");
+    } else {
+        $("#heartIcon").attr("class", "far fa-heart");
+    }
+}
+
 $(document).ready(function() {
     $("#feedbackSection").on("click", "button", function() {
-        console.log("Asfas");
         $("#feedbackMessage").toggle();
     });
 
