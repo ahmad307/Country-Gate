@@ -4,17 +4,35 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <!-- File stylesheet -->
-        <link rel="stylesheet" href="sight.css">
+        <link rel="stylesheet" href="css/sight.css">
     </head>
     <body>
+        <!-- Breadcrumb -->
+        <!-- <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" display="inline-block;">
+                <li class="breadcrumb-item" display="inline-block;"><a href="MainPage.html">Home</a></li>
+                <li class="breadcrumb-item" display="inline-block;"><a href="#">Country</a></li>
+                <li class="breadcrumb-item" display="inline-block;"><a href="#">Sight</a></li>
+                <li class="breadcrumb-item active" aria-current="page" display="inline-block;">...</li>
+            </ol>
+        </nav> -->
+        <div class="container">
+            <div class="vertical">
+                <a href="#">Home</a>
+                <a href="#">Newyork</a>
+                <span class="destination">Broklyn Bridge</span>
+            </div>
+        </div>
+        
+
         <div class="header">
             <h1>Broklyn Bridge</h1>
         </div>
-
         <br><br>
 
         <!-- Sight Description -->
@@ -38,6 +56,13 @@
                     </div>
                 </div>
             </div>
+            <div id="feedbackSection" class="row" style="margin-left: 0.5rem;">
+                <h6>Was this info helpful?</h6>
+                <button id="goodBtn" class="btn btn-success experienceButton">Yes</button>
+                <button id="badBtn" class="btn btn-danger experienceButton" style="margin-left: 0.5rem;">No</button>
+                <p id="feedbackMessage" style="display: none; margin-left: 1rem;">Thank you for your feedback!</p>
+            </div>
+            <br><br>
         </div>
 
         <!-- Reviews Section -->
@@ -79,6 +104,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
+                    <label>How was your experience?</label>
                     <label for="userReview">Your Review</label>
                     <textarea id="userReview" name="userReview" type="text" placeholder="What do you think about this sight?" class="form-control"></textarea>
                 </div>
@@ -88,14 +114,37 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
     </body>
+    <style>
+        .experienceButton {
+            font-size: 14px;
+            width: 5rem;
+            height: 1.2rem;
+            padding: 0.1rem;
+            margin-left: 2rem;
+        }
+    </style>
     <script>
         $(document).ready(function() {
+            localStorage.setItem("bar", "hamada");
+            var foo = localStorage.getItem("bar");
+            console.log(foo);
+
+            $("#feedbackSection").on("click", "button", function() {
+                console.log("Asfas");
+                $("#feedbackMessage").toggle();
+            });
+
             $("#submitReviewBtn").on("click", function() {
                 const userName = "Ahmad Hussain";
                 const userReview = $("#userReview").val();
 
+                if (userReview == "") {
+                    window.alert("Kindly insert a valid review.")
+                    return;
+                }
+                
                 $("#reviews").append(`
                     <div class="col-xl-10 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
@@ -104,8 +153,8 @@
                                 ${userReview}
                             </p>
                         </div>
-                    </div>
-                `);
+                    </div>`
+                );
 
                 // Close modal and clean input field
                 $("#userReview").val("");
