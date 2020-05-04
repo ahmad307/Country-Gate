@@ -185,7 +185,7 @@
             }
             $('#main').append(`<div class="jumbotron jumbotron-fluid" style="background-color: bisque;">
                 <div class="container">
-                    <h1 class="display-4" class="text-center" style="height:40px;margin-bottom: 0px;height: 50px;font-weight:bold; color:blue"> ${data[country][0]["country"]} </h1>
+                    <h1 class="display-4" class="text-center" style="height:20px;margin-bottom: 0px;font-weight:bold; color:blue"> ${data[country][0]["country"]} </h1>
                 </div>
             </div>
             `)
@@ -238,11 +238,10 @@
     <!-- BreadCrumb-->
 
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" display="inline-block;">
+        <ol class="breadcrumb" display="inline-block;"  style="margin-bottom:0px; margin-top:-2.5%;">
             <li class="breadcrumb-item" display="inline-block;"><a href="MainPage.html">Home</a></li>
             <li class="breadcrumb-item" display="inline-block;"><a href="#">Country</a></li>
-            <li class="breadcrumb-item" display="inline-block;"><a href="sight.html">Sight</a></li>
-            <li class="breadcrumb-item active" aria-current="page" display="inline-block;">...</li>
+            
         </ol>
 
     </nav>
@@ -255,6 +254,28 @@
 
         </ul>
     </nav>
+<!--------NAVS---- de l requirement
+
+<nav aria-label="navs">
+ <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link " href="MainPage.html" style="font-weight:bold; font-size:130%; ">Home</a> </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" style="font-weight:bold; font-size:130%;" >Egyptian Museum</a> </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"  style="font-weight:bold; font-size:130%;" >Pyramids</a> </li>
+ <li class="nav-item">
+    <a class="nav-link" href="#" style="font-weight:bold; font-size:130%;" >Karnak Temple</a> </li>
+ <li class="nav-item">
+    <a class="nav-link" href="#" style="font-weight:bold; font-size:130%;" >Philae Temple</a> </li>
+ <li class="nav-item">
+    <a class="nav-link" href="#" style="font-weight:bold; font-size:130%;" >Valley Of the Kings</a> </li>
+ <li class="nav-item">
+    <a class="nav-link" href="#" style="font-weight:bold; font-size:130%;" >Khan El Khalili</a> </li>
+  </ul>
+</nav>
+<!------------------------------------>
+
     <!--Cards and scrollbar-->
 
     <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
