@@ -44,7 +44,7 @@
                 "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
             }],
             "france": [{
-                "img": "img/pyramids.jpg",
+                "img": "img/Paris.jpeg",
                 "title": "Egyption pyramides",
                 "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
                 "country": "Egypt"
@@ -66,7 +66,7 @@
                 "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
             }],
             "Spain": [{
-                "img": "img/pyramids.jpg",
+                "img": "img/Spain.png",
                 "title": "Egyption pyramides",
                 "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
                 "country": "Egypt"
@@ -92,6 +92,12 @@
 
 
         $(document).ready(function() {
+            localStorage.setItem("country", "france");
+            var country = localStorage.getItem("country");
+            console.log(country);
+
+
+
             for (let i = 0; i < data.egypt.length; ++i) {
 
                 $("#nav-in").append(`<li class="nav-item">
