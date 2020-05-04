@@ -28,6 +28,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
+            $(document).on("click", function(event) {
+                var text = event.target.textContent;
+                var id = event.target.id;
+                console.log(id);
+
+                localStorage.setItem("country", id);
+
+
+            });
 
             $('[data-toggle="popover"]').popover({
                 placement: 'bottom',
@@ -81,7 +90,7 @@
                                                     <li>Egyptian Museum</li>
                                                     <li>Karnak Temple</li>
                                                 </ul>
-                                                <a href="Country_Egypt.html" class="btn btn-info ml-5" role="button">Visit</a>
+                                                <a id="egypt" href="Country_Egypt.html" class="btn btn-info ml-5" role="button">Visit</a>
                                             </div>
 
                                         </div>
@@ -100,7 +109,7 @@
                                                     <li>Louvre Museum</li>
                                                     <li>Musée d'Orsay</li>
                                                 </ul>
-                                                <a href="Country_France.html" class="btn btn-info ml-5 role=" button ">Visit</a>
+                                                <a id="france" href="Country_Egypt.html" class="btn btn-info ml-5 role=" button ">Visit</a>
                       </div>
 
 
@@ -121,7 +130,7 @@
                           <li>St. Peter's Basilica</li>
                           <li>Vatican Museums</li>
                         </ul>
-                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total& "
+                        <a id="rome"  href="Country_Egypt.html "
                           class="btn btn-info ml-5 " role="button ">Visit</a>
 
                       </div>
@@ -154,7 +163,7 @@
                           <li>Brandenburg Gate</li>
                           <li>Reichstag Building</li>
                         </ul>
-                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total& "
+                        <a id="germany" href="Country_Egypt.html "
                           class="btn btn-info ml-5 " role="button ">Visit</a>
 
                       </div>
@@ -177,7 +186,7 @@
                           <li>The Moscow Kremlin</li>
                           <li>Russian Museum</li>
                         </ul>
-                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total&"
+                        <a id="russuia" href="Country_Egypt.html"
                           class="btn btn-info ml-5" role="button">Visit</a>
 
                       </div>
@@ -200,7 +209,7 @@
                           <li>Alhambra</li>
                           <li>Park Güell</li>
                         </ul>
-                        <a href="https://www.booking.com/index.en-gb.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaEOIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4Aq6ByvQFwAIB;sid=4014af0fc14eeb680b8c89dbf71a66a4;keep_landing=1&sb_price_type=total&"
+                        <a id="spain" href="Country_Egypt.html" 
                           class="btn btn-info ml-5" role="button">Visit</a>
 
                       </div>
