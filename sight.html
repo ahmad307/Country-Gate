@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="css/sight.css">
     </head>
     <body>
-        <!-- Breadcrumb -->
         <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb" display="inline-block;">
                 <li class="breadcrumb-item" display="inline-block;"><a href="MainPage.html">Home</a></li>
@@ -21,6 +20,7 @@
                 <li class="breadcrumb-item active" aria-current="page" display="inline-block;">...</li>
             </ol>
         </nav> -->
+        <!-- Breadcrumb -->
         <div class="container">
             <div class="vertical">
                 <a href="#">Home</a>
@@ -28,11 +28,19 @@
                 <span class="destination">Broklyn Bridge</span>
             </div>
         </div>
-        
-
-        <div class="header">
+    
+        <!-- Nav bar -->
+        <nav class="navbar navbar-light">
+            <a id="userSalutation" class="navbar-brand">Hi Ahmad</a>
+            <button class="navbar-right btn btn-default my-sm-0">Logout</button>
+        </nav>
+        <br>
+    
+        <!-- Header -->
+        <div class="header row">
             <h1>Broklyn Bridge</h1>
         </div>
+
         <br><br>
 
         <!-- Sight Description -->
@@ -104,7 +112,6 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    <label>How was your experience?</label>
                     <label for="userReview">Your Review</label>
                     <textarea id="userReview" name="userReview" type="text" placeholder="What do you think about this sight?" class="form-control"></textarea>
                 </div>
@@ -116,15 +123,6 @@
             </div>
         </div>
     </body>
-    <style>
-        .experienceButton {
-            font-size: 14px;
-            width: 5rem;
-            height: 1.2rem;
-            padding: 0.1rem;
-            margin-left: 2rem;
-        }
-    </style>
     <script>
         $(document).ready(function() {
             localStorage.setItem("bar", "hamada");
