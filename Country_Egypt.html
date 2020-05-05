@@ -178,8 +178,8 @@
             $(document).on("click", function(event) {
                 var text = event.target.textContent;
                 var id = event.target.id;
-                localStorage.setItem("country", id);
-                localStorage.setItem("site", text);
+                // localStorage.setItem("country", id);
+                localStorage.setItem("sight", text);
 
                 console.log(id);
                 console.log(text);
@@ -195,7 +195,7 @@
             $('#main').append(`<div class="jumbotron jumbotron-fluid" >
                 <div class="container">
                     
-                    <h1 class="display-4" class="text-center" style="height:20px;margin-bottom: 0px;font-weight:bold; color:blue"> ${data[country][0]["country"]} </h1>
+                    <h1 class="display-4" class="text-center" style="height:20px;margin-bottom: 0px;font-weight:bold; color:blue">${data[country][0]["country"]}</h1>
                 </div>
             </div>
             `)
@@ -218,7 +218,7 @@
                             <div id="accordion">
                                 <div class="card">
                                     <div class="card-header" id="heading1">
-                                        <h4 class="card-title" style="font-weight:bold; color:blue" data-toggle="tooltip" data-placement="top" title="Visit Page For More Info"><a href="sight.html" class="card-link"> ${data[country][i]["title"]}</a></h4>
+                                        <h4 class="card-title" style="font-weight:bold; color:blue" data-toggle="tooltip" data-placement="top" title="Visit Page For More Info"><a href="sight.html" class="card-link">${data[country][i]["title"]}</a></h4>
 
                                         <p class="card-text">${data[country][i]["text"]}</p>
                                         <p class="collapse" id="collapse${i}"> Now the museum has more than 100,000 ancient objects inside its walls.<br> of the world's greatest historical mysteries. ... The Egyptians believed that if the pharaoh's body could be mummified after death the pharaoh

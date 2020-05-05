@@ -21,7 +21,6 @@ function heartFlip() {
 
 function fillPage(sight, country) {
     $("#cityName").html(country);
-
     $(".sightName").html(sight);
     $("#sightDescription").html(data[sight]["text"]);
     $(".header").css("background", `linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 50%,rgba(22, 22, 22, 0.5) 75%, #161616 100%),`
@@ -40,10 +39,11 @@ $(document).ready(function() {
         // console.log(text, type);
     });
 
-    localStorage.setItem("sight", "Eiffel Tower");
-    localStorage.setItem("country", "France");
+    // localStorage.setItem("sight", "Eiffel Towersa");
+    // localStorage.setItem("country", "France");
     var sight = localStorage.getItem("sight");
     var country = localStorage.getItem("country");
+    country[0] = country[0] + 32;
     fillPage(sight, country);
     
 
