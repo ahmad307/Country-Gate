@@ -1,127 +1,265 @@
 <html>
-    <head>
-        <title>Sight</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<head>
+    <title>Sight</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/154d872798.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-        <!-- File stylesheet -->
-        <link rel="stylesheet" href="css/sight.css">
-    </head>
-    <body>
-        <!-- Breadcrumb -->
-        <div class="container">
-            <div class="vertical">
-                <a href="MainPage.html">Home</a>
-                <a id="cityName" href="country.html">Newyork</a>
-                <span class="sightName destination">Broklyn Bridge</span>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/154d872798.js" crossorigin="anonymous"></script>
+
+    <!-- File stylesheet -->
+    <link rel="stylesheet" href="css/sight.css">
+</head>
+
+<body onload="checkCookies()">
+    <!-- Breadcrumb -->
+    <div class="container">
+        <div class="vertical">
+            <a href="MainPage.html">Home</a>
+            <a id="cityName" href="country.html">Newyork</a>
+            <span class="sightName destination">Broklyn Bridge</span>
+        </div>
+    </div>
+
+    <!-- Nav bar -->
+    <nav class="navbar navbar-light">
+        <a id="userSalutation" class="navbar-brand"></a>
+        <div class="row">
+            <a id="heartIcon" type="button" class="far fa-heart" onclick="heartFlip_handler()"
+                style="font-size: larger;"></a>
+            <label id="likesCounter" style="margin-left: 0.5rem; font-size: small;"></label>
+        </div>
+        <button id="logoutButton" class="navbar-right btn btn-default my-sm-0">Logout</button>
+    </nav>
+
+    <!-- Header -->
+    <div class="header row">
+        <h1 class="sightName">Broklyn Bridge</h1>
+    </div>
+
+    <br><br>
+
+    <!-- Sight Description -->
+    <div class="container">
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5 sights">
+            <div class="col-xl-4 col-lg-7 text-center">
+                <img id="sightImage1" class="img-fluid mb-3 mb-lg-0" src="./img/bb4.jpg">
+            </div>
+            <div class="col-xl-4 col-lg-7 text-center">
+                <img id="sightImage2" class="img-fluid mb-3 mb-lg-0" src="./img/bb5.jpg">
+            </div>
+            <div class="col-xl-4 col-lg-6 text-center">
+                <img id="sightImage3" class="img-fluid mb-3 mb-lg-0" src="./img/bb1.jpg">
+            </div>
+            <div class="col-xl-10 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h4 class="sightName">Broklyn Bridge</h4>
+                    <p id="sightDescription" class="text-black-50 mb-0">
+                        The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City, spanning the
+                        East River between the boroughs of Manhattan and Brooklyn. Opened on May 24, 1883, the Brooklyn
+                        Bridge was the first fixed crossing across the East River. It was also the longest suspension
+                        bridge in the world at the time, with a main span of 1,595.5 feet and a deck height of 127 ft
+                        above mean high water. The span was originally called the New York and Brooklyn Bridge or the
+                        East River Bridge but was officially renamed the Brooklyn Bridge in 1915. Proposals for a bridge
+                        connecting Manhattan and Brooklyn were first made in the early 19th century, which eventually
+                        led to the construction of the current span, designed by John A. Roebling. His son Washington
+                        Roebling oversaw the construction and contributed further design work, assisted by the latter's
+                        wife, Emily Warren Roebling. While construction started in 1870, numerous controversies and the
+                        novelty of the designed construction process caused the actual construction to be prolonged over
+                        thirteen years. Wikipedia
+                    </p>
+                </div>
             </div>
         </div>
-    
-        <!-- Nav bar -->
-        <nav class="navbar navbar-light">
-            <a id="userSalutation" class="navbar-brand">Hi Ahmad</a>
-            <div class="row">
-                <a id="heartIcon" type="button" class="far fa-heart" onclick="heartFlip()" style="font-size: larger;"></a>
-                <label id="likesCounter" style="margin-left: 0.5rem; font-size: small;">0</label>
-            </div>
-            <button class="navbar-right btn btn-default my-sm-0">Logout</button>
-        </nav>
-    
-        <!-- Header -->
-        <div class="header row">
-            <h1 class="sightName">Broklyn Bridge</h1>
+        <div id="feedbackSection" class="row" style="margin-left: 0.5rem;">
+            <h6>Was this info helpful?</h6>
+            <button class="btn btn-success experienceButton">Yes</button>
+            <button class="btn btn-danger experienceButton" style="margin-left: 0.5rem;">No</button>
+            <p id="feedbackMessage" style="display: none; margin-left: 1rem;">Thank you for your feedback!</p>
         </div>
-
         <br><br>
+    </div>
 
-        <!-- Sight Description -->
-        <div class="container">
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5 sights">
-                <div class="col-xl-4 col-lg-7 text-center">
-                    <img id="sightImage1" class="img-fluid mb-3 mb-lg-0" src="./img/bb4.jpg">
-                </div>
-                <div class="col-xl-4 col-lg-7 text-center">
-                    <img id="sightImage2" class="img-fluid mb-3 mb-lg-0" src="./img/bb5.jpg">
-                </div>
-                <div class="col-xl-4 col-lg-6 text-center">
-                    <img id="sightImage3" class="img-fluid mb-3 mb-lg-0" src="./img/bb1.jpg">
-                </div>
-                <div class="col-xl-10 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <h4 class="sightName">Broklyn Bridge</h4>
-                        <p id="sightDescription" class="text-black-50 mb-0">
-                            The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City, spanning the East River between the boroughs of Manhattan and Brooklyn. Opened on May 24, 1883, the Brooklyn Bridge was the first fixed crossing across the East River. It was also the longest suspension bridge in the world at the time, with a main span of 1,595.5 feet and a deck height of 127 ft above mean high water. The span was originally called the New York and Brooklyn Bridge or the East River Bridge but was officially renamed the Brooklyn Bridge in 1915. Proposals for a bridge connecting Manhattan and Brooklyn were first made in the early 19th century, which eventually led to the construction of the current span, designed by John A. Roebling. His son Washington Roebling oversaw the construction and contributed further design work, assisted by the latter's wife, Emily Warren Roebling. While construction started in 1870, numerous controversies and the novelty of the designed construction process caused the actual construction to be prolonged over thirteen years. Wikipedia
-                        </p>
-                    </div>
-                </div>
+    <!-- Reviews Section -->
+    <div class="container reviews">
+        <div class="row">
+            <div class="text-center col-md-4 text-lg-left">
+                <h2>Reviews</h2>
             </div>
-            <div id="feedbackSection" class="row" style="margin-left: 0.5rem;">
-                <h6>Was this info helpful?</h6>
-                <button class="btn btn-success experienceButton">Yes</button>
-                <button class="btn btn-danger experienceButton" style="margin-left: 0.5rem;">No</button>
-                <p id="feedbackMessage" style="display: none; margin-left: 1rem;">Thank you for your feedback!</p>
-            </div>
-            <br><br>
         </div>
-
-        <!-- Reviews Section -->
-        <div class="container reviews">
-            <div class="row">
-                <div class="text-center col-md-4 text-lg-left">
-                    <h2>Reviews</h2>
+        <div id="reviews" class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <div class="col-xl-10 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h5>Mohamad Rashad</h5>
+                    <p class="text-black-50 mb-0">
+                        A really remarkable place.
+                    </p>
                 </div>
             </div>
-            <div id="reviews" class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-10 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <h5>Mohamad Rashad</h5>
-                        <p class="text-black-50 mb-0">
-                            A really remarkable place.
-                        </p>
-                    </div>
+            <div class="col-xl-10 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h5>Mostafa Mosa</h5>
+                    <p class="text-black-50 mb-0">
+                        Great Bridge and nice view on the river.
+                    </p>
                 </div>
-                <div class="col-xl-10 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <h5>Mostafa Mosa</h5>
-                        <p class="text-black-50 mb-0">
-                            Great Bridge and nice view on the river.
-                        </p>
-                    </div>
-                </div>
-            </div>    
-            <button type="button" class="btn addReview" data-toggle="modal" data-target="#addReviewModal">
-                Add Your Review
-            </button>
+            </div>
         </div>
+        <button type="button" class="btn addReview" data-toggle="modal" data-target="#addReviewModal">
+            Add Your Review
+        </button>
+    </div>
 
-        <!-- Add review modal -->
-        <div class="modal fade" id="addReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
+    <!-- Add review modal -->
+    <div class="modal fade" id="addReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Add Your Review</h5>
-                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Your Review</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <label for="userReview">Your Review</label>
-                    <textarea id="userReview" name="userReview" type="text" placeholder="What do you think about this sight?" class="form-control"></textarea>
+                    <textarea id="userReview" name="userReview" type="text"
+                        placeholder="What do you think about this sight?" class="form-control"></textarea>
                 </div>
                 <div class="modal-footer">
-                  <button id="closeModalBtn" class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
-                  <a id="submitReviewBtn" class="btn" style="color: white; background-color: #64a19d;">Add Review</a>
+                    <button id="closeModalBtn" class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                    <a id="submitReviewBtn" class="btn" style="color: white; background-color: #64a19d;">Add Review</a>
                 </div>
-              </div>
             </div>
         </div>
-    </body>
-    <script src="./js/sight.js"></script>
+    </div>
+</body>
+<script src="./js/sight.js"></script>
+<!-- Backend will goes here -->
+<script>
+    async function get_likes(sight_name) {
+        const res = await fetch("http://localhost:3000/likes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: sight_name,
+            })
+        })
+        const data = await res.json()
+        document.getElementById("likesCounter").innerText = data['count'].toString();
+    }
+
+
+    async function add_likes(sight_name, user_id) {
+        const res = await fetch("http://localhost:3000/add_likes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: sight_name,
+                id: user_id,
+            })
+        })
+        const data = await res.json()
+
+    }
+
+
+    function setCookie(name, value, daysToLive) {
+        // Encode value in order to escape semicolons, commas, and whitespace
+        var cookie = name + "=" + encodeURIComponent(value);
+
+        if (typeof daysToLive === "number") {
+            /* Sets the max-age attribute so that the cookie expires
+            after the specified number of days */
+            cookie += "; max-age=" + (daysToLive * 24 * 60 * 60);
+
+            document.cookie = cookie;
+        }
+    }
+
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
+        return "none"
+    }
+
+    function checkCookies() {
+        var cookie = getCookie('name')
+        get_likes(localStorage.getItem("sight"));
+
+        if (cookie != "none") {
+            document.getElementById("logoutButton").innerText = "Logout";
+            document.getElementById("userSalutation").innerText = "Hi" + " " + cookie.toString();
+
+        } else {
+            document.getElementById("logoutButton").innerText = "Login";
+            document.getElementById("userSalutation").innerText = "Welcome";
+        }
+
+    }
+
+    function change_page() {
+        window.location.href = "login.html";
+    }
+
+    var logoutButton = document.getElementById("logoutButton");
+    logoutButton.onclick = function () {
+        var currentName = logoutButton.innerText;
+        if (currentName == "Login") {
+            change_page();
+        }
+        else {
+            setCookie('id', '-1', 1);
+            setCookie('name', 'none', 1);
+            window.location.reload();
+        }
+    }
+
+    function allow_access() {
+        var cookie = getCookie('id');
+        if (cookie == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function heartFlip_handler() {
+        if (!allow_access()) {
+            alert("Please Login to be able to react on the sight..");
+        }
+        else {
+            heartFlip();
+            //update database with current number..
+            add_likes(localStorage.getItem("sight"), getCookie('id'));
+        }
+    }
+
+</script>
+
 </html>

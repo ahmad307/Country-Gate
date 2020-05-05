@@ -16,6 +16,8 @@ function heartFlip() {
     if (className === "far fa-heart"){
         $("#heartIcon").attr("class", "fa fa-heart");
         $("#likesCounter").html(likes + 1);
+        //update database with current number..
+
     } else {
         $("#heartIcon").attr("class", "far fa-heart");
         $("#likesCounter").html(likes - 1);
