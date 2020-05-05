@@ -3,37 +3,65 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384
-    -
-    ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <title>Country Gate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet"> 
     <style>
-        .card:hover {
-            -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
-            box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
-        }
-        
-        body {
-            background-image: url('img/Screenshot from 2020-04-29 16-00-33.png');
-        }
-        
-        .carousel-control-next-icon,
-        .carousel-control-prev-icon {
-            filter: invert(200);
-        }
+      #userSalutation {
+        font-family: Jost, sans-serif;
+      }
+
+      .projectTitle {
+        font-family: "Jost", sans-serif;
+        font-size: 3.5rem;
+      }
+
+      .card {
+        border-style: none;
+        border-radius: 1rem;
+        margin-bottom: 3rem !important;
+      }
+
+      .card-header {
+        background-color: #64a19d !important;
+      }
+
+      .btn {
+        background-color: #64a19d !important;
+      }
+
+      .card:hover {
+          -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+      }
+      
+      body {
+          background-image: url('img/background.jpg');
+      }
+      
+      .carousel-control-next-icon,
+      .carousel-control-prev-icon {
+          filter: invert(200);
+      }
+
+      .carousel-control-next-icon {
+        margin-left: 4rem;
+      }
+
+      .carousel-control-prev-icon {
+        margin-right: 4rem;
+      }
 
       .topLeftCorner{
       position:absolute;
       top:20px;
       right:10px;
-      color:#fff;
+      color:black;
       font-size:larger;
-      font-weight: bold;
-      background-color:#17a2b8;
-      border-color: #17a2b8;
+      font-family: Jost;
       text-align: center;
-      line-height: 50px;
+      /* line-height: 50px; */
     }
 
     .topRightCorner{
@@ -43,7 +71,6 @@
       color: black;
       font-size:larger;
       font-weight: bold;
-      border-color: #17a2b8;
       text-align: center;
       line-height: 50px;
     }
@@ -87,7 +114,7 @@
                 </div>
                 <div class="modal-body">
                     <p> Here you can find the sights of each country and historical information about it. Click on any card to get more information about country sights. </p>
-                    <button id="closeButton" type="button" class="btn btn-secondary float-right" data-dismiss="modal" aria-hidden="true">close</button>
+                    <button id="closeButton" type="button" class="btn btn-secondary float-right" data-dismiss="modal" aria-hidden="true">Close</button>
                 </div>
             </div>
         </div>
@@ -95,8 +122,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center text-black mt-3 font-italic font-weight-bold"> Country Gate</h1>
-                <button id="logoutButton" class="topLeftCorner" type="button"></button>
+                <h1 class="projectTitle text-center text-black mt-3 font-italic font-weight-bold">Country Gate</h1>
+                <button id="logoutButton" class="btn topLeftCorner" type="button"></button>
                 <label id="userSalutation" class="topRightCorner"></label>
                 <div id="inam" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">

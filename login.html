@@ -22,7 +22,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url('img/Screenshot from 2020-04-29 16-00-33.png');
+            background-image: url('img/background.jpg');
         }
 
         * {
@@ -34,6 +34,7 @@
         .container {
             padding: 16px;
             background-color: white;
+            margin-top: 5rem;
         }
 
         /* Full-width input fields */
@@ -63,8 +64,8 @@
 
         /* Set a style for the submit button */
 
-        .registerbtn {
-            background-color: #4CAF50;
+        .loginbtn {
+            background-color: #64a19d;
             color: white;
             padding: 16px 20px;
             margin: 8px 0;
@@ -74,7 +75,7 @@
             opacity: 0.9;
         }
 
-        .registerbtn:hover {
+        .loginbtn:hover {
             opacity: 1;
         }
 
@@ -107,7 +108,8 @@
             <label for="psw"><b>Password</b></label>
             <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
 
-            <button id="loginButton" type="button" class="loginbtn">Login</button>
+            <button id="loginButton" type="button" class="btn loginbtn">Login</button>
+            <p class="text-center">Don't have an acount? <a href="Registration.html"> Register</a>.</p>
 
         </div>
 
