@@ -27,7 +27,10 @@
         <!-- Nav bar -->
         <nav class="navbar navbar-light">
             <a id="userSalutation" class="navbar-brand">Hi Ahmad</a>
-            <a id="heartIcon" type="button" class="far fa-heart" onclick="heartFlip()"></a>
+            <div class="row">
+                <a id="heartIcon" type="button" class="far fa-heart" onclick="heartFlip()" style="font-size: larger;"></a>
+                <label id="likesCounter" style="margin-left: 0.5rem; font-size: small;">0</label>
+            </div>
             <button class="navbar-right btn btn-default my-sm-0">Logout</button>
         </nav>
     

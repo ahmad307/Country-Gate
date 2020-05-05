@@ -12,10 +12,13 @@ var data = {
 
 function heartFlip() {
     var className = $("#heartIcon").attr("class");
+    var likes = parseInt($("#likesCounter").html());
     if (className === "far fa-heart"){
         $("#heartIcon").attr("class", "fa fa-heart");
+        $("#likesCounter").html(likes + 1);
     } else {
         $("#heartIcon").attr("class", "far fa-heart");
+        $("#likesCounter").html(likes - 1);
     }
 }
 
