@@ -52,7 +52,10 @@
       .carousel-control-prev-icon {
         margin-right: 4rem;
       }
-
+      .progress-bar
+      {
+        background-color: #64a19d;
+      }
       .topLeftCorner{
       position:absolute;
       top:70px;
@@ -73,6 +76,16 @@
       font-weight: bold;
       text-align: center;
       line-height: 50px;
+    }
+    .jumbotron
+    {
+      background-color: white;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+    .progress
+    {
+      margin-top: -15px;
     }
     </style>
 
@@ -289,7 +302,14 @@
         </div>
 
       </div>
-
+      <!--Progress bar-->
+      <div class="jumbotron mx-auto">
+        <p> The website is under development. We are adding more Countries.</p>
+        <div class="progress" style="background-color:darkgray;">
+          <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+            aria-valuemax="100">75%</div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -317,7 +337,7 @@
             cookie += "; max-age=" + (daysToLive * 24 * 60 * 60);
 
             document.cookie = cookie;
-        }
+        } 
     }
 
     function getCookie(c_name) {
