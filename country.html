@@ -13,16 +13,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet"> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-    <title>Country_Gate</title>
+    <title>Country Gate</title>
 
     <style>
         body {
-            background-image: url('img/background.jpg');
+            /* background-image: url('img/background.jpg'); */
         }
 
         .jumbotron {
@@ -32,244 +33,85 @@
         .breadcrumb {
             background: none
         }
-    </style>
 
-    <script>
-        var data = {
-            "egypt": [{
-                "img": "img/pyramids.jpg",
-                "title": "Egyption Pyramides",
-                "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
-                "country": "Egypt"
-            }, {
-                "img": "img/EgyptianMuseum.jpg",
-                "title": "Egyptian Museum",
-                "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
-            }, {
-                "img": "img/m3bdelkarnk.jpg",
-                "title": "Karnak Temple",
-                "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
-            }, {
-                "img": "img/philaeTemple.jpg",
-                "title": "Philae Temple",
-                "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
-            }, {
-                "img": "img/elmlok.jpg",
-                "title": "Valley Of the Kings",
-                "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
-            }],
-            "france": [{
-                "img": "img/Paris.jpeg",
-                "title": "Eiffel Tower",
-                "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
-                "country": "France"
-            }, {
-                "img": "img/EgyptianMuseum.jpg",
-                "title": "Egyptian Museum",
-                "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
-            }, {
-                "img": "img/m3bdelkarnk.jpg",
-                "title": "Karnak Temple",
-                "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
-            }, {
-                "img": "img/philaeTemple.jpg",
-                "title": "Philae Temple",
-                "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
-            }, {
-                "img": "img/elmlok.jpg",
-                "title": "Valley Of the Kings",
-                "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
-            }],
-            "spain": [{
-                "img": "img/Spain.png",
-                "title": "Egyption Pyramides",
-                "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
-                "country": "Spain"
-            }, {
-                "img": "img/EgyptianMuseum.jpg",
-                "title": "Egyptian Museum",
-                "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
-            }, {
-                "img": "img/m3bdelkarnk.jpg",
-                "title": "Karnak Temple",
-                "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
-            }, {
-                "img": "img/philaeTemple.jpg",
-                "title": "Philae Temple",
-                "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
-            }, {
-                "img": "img/elmlok.jpg",
-                "title": "Valley Of the Kings",
-                "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
-            }],
-
-            "russuia": [{
-                "img": "img/Rome.jpg",
-                "title": "Egyption Pyramides",
-                "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
-                "country": "Russuia"
-            }, {
-                "img": "img/EgyptianMuseum.jpg",
-                "title": "Egyptian Museum",
-                "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
-            }, {
-                "img": "img/m3bdelkarnk.jpg",
-                "title": "Karnak Temple",
-                "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
-            }, {
-                "img": "img/philaeTemple.jpg",
-                "title": "Philae Temple",
-                "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
-            }, {
-                "img": "img/elmlok.jpg",
-                "title": "Valley Of the Kings",
-                "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
-            }],
-
-            "rome": [{
-                "img": "img/Rome.jpg",
-                "title": "Egyption Pyramides",
-                "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
-                "country": "Rome"
-            }, {
-                "img": "img/EgyptianMuseum.jpg",
-                "title": "Egyptian Museum",
-                "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
-            }, {
-                "img": "img/m3bdelkarnk.jpg",
-                "title": "Karnak Temple",
-                "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
-            }, {
-                "img": "img/philaeTemple.jpg",
-                "title": "Philae Temple",
-                "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
-            }, {
-                "img": "img/elmlok.jpg",
-                "title": "Valley Of the Kings",
-                "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
-            }],
-
-
-            "germany": [{
-                "img": "img/Rome.jpg",
-                "title": "Egyption Pyramides",
-                "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
-                "country": "germany"
-            }, {
-                "img": "img/EgyptianMuseum.jpg",
-                "title": "Egyptian Museum",
-                "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
-            }, {
-                "img": "img/m3bdelkarnk.jpg",
-                "title": "Karnak Temple",
-                "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
-            }, {
-                "img": "img/philaeTemple.jpg",
-                "title": "Philae Temple",
-                "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
-            }, {
-                "img": "img/elmlok.jpg",
-                "title": "Valley Of the Kings",
-                "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
-            }],
-
+        h1, a {
+            font-family: Jost, sans-serif;
+            color: #64a19d !important;
         }
 
+        label {
+            font-family: Jost, sans-serif;
+        }
 
+        button {
+            font-family: Jost, sans-serif;
+            background-color: #64a19d !important;
+            color: white !important; 
+            font-style: bold;
+            border-style: none !important;
+        }
 
-        $(document).ready(function () {
+        .navbar {
+            background-color: #64a19d;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 3rem;
+        }
 
-            var country = localStorage.getItem("country");
-            console.log(country)
+        #LogoutButton {
+            margin-top: -1rem;
+            font-size: large;
+        }
 
-            $(document).on("click", function (event) {
-                var text = event.target.textContent;
-                var id = event.target.id;
-                // localStorage.setItem("country", id);
-                localStorage.setItem("sight", text);
+        .breadcrumb {
+            font-style: bold !important;
+        }
 
-                console.log(id);
-                console.log(text);
+        .header {
+            font-size: 6.5rem;
+            letter-spacing: 0.8rem;
+            background: -webkit-linear-gradient(rgba(255, 255, 255, 0.999), rgba(255, 255, 255, 0.6));
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            margin-top: 12rem;
+        }
 
-            });
+        #main {
+            background-image: url("img/background.jpg");
+            height: 100%;
+            background-size: auto;
+            background-position: center;
+            object-fit: cover;
+        }
 
-            for (let i = 0; i < data[country].length; ++i) {
-
-                $("#nav-up").append(`<li class="nav-item">
-                    <a class="nav-link " href="#${i}" style="font-weight:bold; font-size:100%; ">${data[country][i]["title"]}</a> </li>`)
-
-            }
-            $('#main').append(`<div class="jumbotron jumbotron-fluid" >
-                <div class="container">
-                    
-                    <h1 class="display-4" class="text-center" style="height:20px;margin-bottom: 0px;font-weight:bold; color:blue">${data[country][0]["country"]}</h1>
-                </div>
-            </div>
-            `)
-
-
-            for (let i = 0; i < data.egypt.length; ++i) {
-                $("#Append").append(`
-             
-
-        <div class="card border-dark mb-3" id="${[i]}" style="max-width:100%; margin: 5px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src= ${data[country][i]["img"]} class="card-img" alt="Photo Of Egyptian Museum" style="width: min-width; height: min-content;">
-                </div>
-                <div class="col-md-8">
-
-                    <div class="card-body">
-                        <div expanded="true" aria-labelledby="heading1" data-parent="#accordion">
-
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="heading1">
-                                        <h4 class="card-title" style="font-weight:bold; color:blue" data-toggle="tooltip" data-placement="top" title="Visit Page For More Info"><a href="sight.html" class="card-link">${data[country][i]["title"]}</a></h4>
-
-                                        <p class="card-text">${data[country][i]["text"]}</p>
-                                        <p class="collapse" id="collapse${i}"> Now the museum has more than 100,000 ancient objects inside its walls.<br> of the world's greatest historical mysteries. ... The Egyptians believed that if the pharaoh's body could be mummified after death the pharaoh
-                                            would live forever.</p>
-
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">See More</button>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>`);
-
-            }
-
-        })
-    </script>
-
+        #labelId {
+            color: white;
+        }
+    </style>
 </head>
 
 <body onload="checkCookies()">
-
-    <label id="labelID" style="position:absolute;top:22px;left:10px; color: blue; font-size: larger;"></label>
-
-    <div class="text-right">
-        <button id="LogoutButton" style="position:absolute;top:20px;right:10px; color: blue; font-size: medium;"
-            type="button" class="btn btn-primary"></button>
+    <nav class="navbar navbar-light">
+        <label id="labelID" class="navbar-brand"></label>
+        <div class="text-right">
+            <button id="LogoutButton" type="button" class="btn"></button>
+        </div>
+    </nav>
+    
+    <!-- Page title -->
+    <div id="main">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">  
+                <h1 class="header countryName text-center display-4" styles="height:20px;margin-bottom: 0px;font-weight:bold"></h1>
+            </div>
+        </div>
     </div>
-    <div id="main"> </div>
 
     <!-- BreadCrumb-->
-
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" style="margin-top: 2rem;">
         <ol class="breadcrumb" display="inline-block;" style="margin-bottom:0px; margin-top:-2.5%; font-weight:bold;">
             <li class="breadcrumb-item" display="inline-block;"><a href="MainPage.html">Home</a></li>
-            <li class="breadcrumb-item" display="inline-block;"><a href="#">Country</a></li>
-
+            <li class="breadcrumb-item" display="inline-block;"><a class="countryName"></a></li>
         </ol>
-
-    </nav>
-
     </nav>
 
     <nav aria-label="navs">
@@ -283,7 +125,7 @@
         <div id="Append"></div>
     </div>
 
-    </div>
+    
     <!-- pagination -->
     <div style="margin-left: auto;" class="text-xs-center">
 
@@ -309,6 +151,222 @@
         </nav>
     </div>
 </body>
+
+<script>
+    var data = {
+        "egypt": [{
+            "img": "img/pyramids.jpg",
+            "title": "Egyption Pyramides",
+            "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
+            "country": "Egypt"
+        }, {
+            "img": "img/EgyptianMuseum.jpg",
+            "title": "Egyptian Museum",
+            "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
+        }, {
+            "img": "img/m3bdelkarnk.jpg",
+            "title": "Karnak Temple",
+            "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
+        }, {
+            "img": "img/philaeTemple.jpg",
+            "title": "Philae Temple",
+            "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
+        }, {
+            "img": "img/elmlok.jpg",
+            "title": "Valley Of the Kings",
+            "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
+        }],
+        "france": [{
+            "img": "img/Paris.jpeg",
+            "title": "Eiffel Tower",
+            "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
+            "country": "France"
+        }, {
+            "img": "img/EgyptianMuseum.jpg",
+            "title": "Egyptian Museum",
+            "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
+        }, {
+            "img": "img/m3bdelkarnk.jpg",
+            "title": "Karnak Temple",
+            "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
+        }, {
+            "img": "img/philaeTemple.jpg",
+            "title": "Philae Temple",
+            "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
+        }, {
+            "img": "img/elmlok.jpg",
+            "title": "Valley Of the Kings",
+            "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
+        }],
+        "spain": [{
+            "img": "img/Spain.png",
+            "title": "Egyption Pyramides",
+            "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
+            "country": "Spain"
+        }, {
+            "img": "img/EgyptianMuseum.jpg",
+            "title": "Egyptian Museum",
+            "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
+        }, {
+            "img": "img/m3bdelkarnk.jpg",
+            "title": "Karnak Temple",
+            "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
+        }, {
+            "img": "img/philaeTemple.jpg",
+            "title": "Philae Temple",
+            "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
+        }, {
+            "img": "img/elmlok.jpg",
+            "title": "Valley Of the Kings",
+            "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
+        }],
+
+        "russuia": [{
+            "img": "img/Rome.jpg",
+            "title": "Egyption Pyramides",
+            "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
+            "country": "Russuia"
+        }, {
+            "img": "img/EgyptianMuseum.jpg",
+            "title": "Egyptian Museum",
+            "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
+        }, {
+            "img": "img/m3bdelkarnk.jpg",
+            "title": "Karnak Temple",
+            "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
+        }, {
+            "img": "img/philaeTemple.jpg",
+            "title": "Philae Temple",
+            "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
+        }, {
+            "img": "img/elmlok.jpg",
+            "title": "Valley Of the Kings",
+            "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
+        }],
+
+        "rome": [{
+            "img": "img/Rome.jpg",
+            "title": "Egyption Pyramides",
+            "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
+            "country": "Rome"
+        }, {
+            "img": "img/EgyptianMuseum.jpg",
+            "title": "Egyptian Museum",
+            "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
+        }, {
+            "img": "img/m3bdelkarnk.jpg",
+            "title": "Karnak Temple",
+            "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
+        }, {
+            "img": "img/philaeTemple.jpg",
+            "title": "Philae Temple",
+            "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
+        }, {
+            "img": "img/elmlok.jpg",
+            "title": "Valley Of the Kings",
+            "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
+        }],
+
+
+        "germany": [{
+            "img": "img/Rome.jpg",
+            "title": "Egyption Pyramides",
+            "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
+            "country": "germany"
+        }, {
+            "img": "img/EgyptianMuseum.jpg",
+            "title": "Egyptian Museum",
+            "text": "The Egyptian museum in Cairo houses a great and enormous collection of artifacts, mummies, coffins, stones, ancient belongings, and even food types that used to be buried with the kings before death to use in the afterlife."
+        }, {
+            "img": "img/m3bdelkarnk.jpg",
+            "title": "Karnak Temple",
+            "text": "The importance of Karnak resided in its being the contact point between Amun, the supreme ruler of the universe, and the pharaoh, the supreme ruler on Earth who represented all Egyptian people.Ahmose I, a Thebanprince, thanked the god Amun for his victory by contributing to the temple at Karnak"
+        }, {
+            "img": "img/philaeTemple.jpg",
+            "title": "Philae Temple",
+            "text": "he oldest surviving temple buildings here date from the time of Nectanebo I (circa 370 BC) and the principal deity worshiped was Isis, although Osiris, Nephthys, Hathor, and the cataract gods Khnum and Satet were       also venerated "
+        }, {
+            "img": "img/elmlok.jpg",
+            "title": "Valley Of the Kings",
+            "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
+        }],
+
+    }
+
+    $(document).ready(function () {
+
+        var country = localStorage.getItem("country");
+        console.log(country)
+
+        // Set header image
+        document.getElementById("main").style.backgroundImage = `url("img/${country}.jpg")`;
+
+
+        $(document).on("click", function (event) {
+            // Catches see more clicks and hides see more button
+            if (event.target.innerHTML === "See More") {
+                $(event.target).hide();
+            }
+
+            var text = event.target.textContent;
+            var id = event.target.id;
+            // localStorage.setItem("country", id);
+            localStorage.setItem("sight", text);
+
+            console.log(id);
+            console.log(text);
+
+        });
+
+        for (let i = 0; i < data[country].length; ++i) {
+
+            $("#nav-up").append(`<li class="nav-item">
+                <a class="nav-link " href="#${i}" style="font-weight:bold; font-size:100%; ">${data[country][i]["title"]}</a> </li>`)
+
+        }
+
+        $(".countryName").html(data[country][0]["country"]);
+        // $('#main').append(`<div class="jumbotron jumbotron-fluid" >
+        //     <div class="container">
+                
+        //         <h1 class="display-4" class="text-center" style="height:20px;margin-bottom: 0px;font-weight:bold; color:blue">${data[country][0]["country"]}</h1>
+        //     </div>
+        // </div>
+        // `);
+
+
+        for (let i = 0; i < data.egypt.length; ++i) {
+            $("#Append").append(`
+                <div class="card border-dark mb-3" id="${[i]}" style="max-width:100%; margin: 5px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src= ${data[country][i]["img"]} class="card-img" alt="Photo Of Egyptian Museum" style="width: min-width; height: min-content;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div expanded="true" aria-labelledby="heading1" data-parent="#accordion">
+                                    <div id="accordion">
+                                        <div class="card">
+                                            <div class="card-header" id="heading1">
+                                                <h4 class="card-title" style="font-weight:bold; color:blue" data-toggle="tooltip" data-placement="top" title="Visit Page For More Info"><a href="sight.html" class="card-link">${data[country][i]["title"]}</a></h4>
+
+                                                <p class="card-text">${data[country][i]["text"]}</p>
+                                                <p class="collapse" id="collapse${i}"> Now the museum has more than 100,000 ancient objects inside its walls.<br> of the world's greatest historical mysteries. ... The Egyptians believed that if the pharaoh's body could be mummified after death the pharaoh
+                                                    would live forever.</p>
+
+                                                <button class="btn" data-toggle="collapse" data-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">See More</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            `);
+        }
+
+    })
+</script>
 
 <!--check cookies-->
 <script>
