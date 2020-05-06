@@ -42,7 +42,7 @@
                 style="font-size: larger;"></a>
             <label id="likesCounter" style="margin-left: 0.5rem; font-size: small;"></label>
         </div>
-        <button id="logoutButton" class="navbar-right btn btn-default my-sm-0">Logout</button>
+        <button id="logoutButton" class="navbar-right btn btn-default my-sm-0"></button>
     </nav>
 
     <!-- Header -->
@@ -163,6 +163,25 @@
         document.getElementById("likesCounter").innerText = data['count'].toString();
     }
 
+    async function checkLikes(sightName, userID) {
+        const res = await fetch("http://localhost:3000/check_likes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: sightName,
+                id: userID,
+            })
+        })
+        const data = await res.json()
+        console.log("data", data)
+        if (data['reacted'] == true){
+            heartFlip(true);
+            
+        }
+        
+    }
 
     async function add_likes(sight_name, user_id) {
         const res = await fetch("http://localhost:3000/add_likes", {
@@ -179,6 +198,20 @@
 
     }
 
+    async function deleteLikes(sight_name, user_id) {
+        const res = await fetch("http://localhost:3000/delete_likes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: sight_name,
+                id: user_id,
+            })
+        })
+        const data = await res.json()
+
+    }
 
     function setCookie(name, value, daysToLive) {
         // Encode value in order to escape semicolons, commas, and whitespace
@@ -209,15 +242,20 @@
 
     function checkCookies() {
         var cookie = getCookie('name')
+        var userID = getCookie('id')
         get_likes(localStorage.getItem("sight"));
 
         if (cookie != "none") {
             document.getElementById("logoutButton").innerText = "Logout";
-            document.getElementById("userSalutation").innerText = "Hi" + " " + cookie.toString();
+            document.getElementById("userSalutation").innerText = cookie.toString();
 
         } else {
             document.getElementById("logoutButton").innerText = "Login";
             document.getElementById("userSalutation").innerText = "Welcome";
+        }
+        //check if user already reacted on this sight before 
+        if (userID != -1){
+            checkLikes(localStorage.getItem("sight"), userID)   
         }
 
     }
@@ -254,9 +292,15 @@
             alert("Please Login to be able to react on the sight..");
         }
         else {
-            heartFlip();
+            res = heartFlip();
+            console.log("res",res)
             //update database with current number..
-            add_likes(localStorage.getItem("sight"), getCookie('id'));
+            if (res == "inc"){
+                add_likes(localStorage.getItem("sight"), getCookie('id'));
+            }
+            else{
+                deleteLikes(localStorage.getItem("sight"), getCookie('id'));
+            }
         }
     }
 

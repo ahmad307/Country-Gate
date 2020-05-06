@@ -140,6 +140,51 @@ app.post('/add_likes', (req, res) => {
 
 });
 
+app.post('/delete_likes', (req, res) => {
+  const client = new Client({
+    connectionString: connStr
+  })
+  client.connect()
+  console.log("res", req.body)
+  // get from db 
+  const query = {
+    text: 'delete from public."sight" where name = $1 and user_id = $2',
+    values: [req.body['name'], req.body['id']],
+  }
+  client.query(query, (err, result) => {
+    console.log(err, result)
+    client.end()
+    return res.send({ status: "Done" });
+
+  })
+
+});
+
+app.post('/check_likes', (req, res) => {
+  const client = new Client({
+    connectionString: connStr
+  })
+  client.connect()
+  console.log("res", req.body)
+  // get from db 
+  const query = {
+    text: 'select user_id from public."sight" where name = $1 and user_id = $2',
+    values: [req.body['name'], req.body['id']],
+  }
+  client.query(query, (err, result) => {
+    console.log(err, result['rows'].length)
+    client.end()
+    if (result['rows'].length == 0){
+      return res.send({ reacted: false});
+    }
+    else{
+      return res.send({ reacted: true});
+    }
+
+  })
+
+});
+
 app.listen(3000, () => {
   console.log('listening on 3000');
 });

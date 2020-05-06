@@ -10,17 +10,22 @@ var data = {
     }
 }
 
-function heartFlip() {
+function heartFlip(check) {
     var className = $("#heartIcon").attr("class");
     var likes = parseInt($("#likesCounter").html());
     if (className === "far fa-heart"){
         $("#heartIcon").attr("class", "fa fa-heart");
-        $("#likesCounter").html(likes + 1);
-        //update database with current number..
+        if (!check){
+            $("#likesCounter").html(likes + 1);
+        }
+        return "inc"
 
     } else {
         $("#heartIcon").attr("class", "far fa-heart");
-        $("#likesCounter").html(likes - 1);
+        if (!check){
+            $("#likesCounter").html(likes - 1);
+        }
+        return "dec"
     }
 }
 
