@@ -62,7 +62,11 @@ $(document).ready(function() {
     });
 
     $("#submitReviewBtn").on("click", function() {
-        const userName = "Ahmad Hussain";
+        if (!allow_access()) {
+            alert("Please Login to be able to add review on the sight..");
+            return ;
+        }
+        const userName =getCookie('name') ;
         const userReview = $("#userReview").val();
 
         if (userReview == "") {

@@ -241,6 +241,8 @@
     }
 
     function checkCookies() {
+        setCookie('name', 'Mohamed Rashad',7)
+        setCookie('id', '5', 7)
         var cookie = getCookie('name')
         var userID = getCookie('id')
         get_likes(localStorage.getItem("sight"));
@@ -264,6 +266,8 @@
         window.location.href = "login.html";
     }
 
+    
+
     var logoutButton = document.getElementById("logoutButton");
     logoutButton.onclick = function () {
         var currentName = logoutButton.innerText;
@@ -279,7 +283,8 @@
 
     function allow_access() {
         var cookie = getCookie('id');
-        if (cookie == -1) {
+        console.log("ress",cookie)
+        if (cookie == -1 || cookie == "none" ) {
             return false;
         }
         else {
