@@ -13,11 +13,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <style>
         body {
@@ -39,15 +41,15 @@
 
         /* Full-width input fields */
 
-        input[type=text],
+        /*input[type=text],
         input[type=password] {
-            width: 100%;
+            /*width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
             display: inline-block;
             border: none;
             background: #f1f1f1;
-        }
+        }*/
 
         input[type=text]:focus,
         input[type=password]:focus {
@@ -102,12 +104,22 @@
             <p>Please fill in this form to Login.</p>
             <hr>
 
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="Enter Email" name="email" required>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="background-color:dimgray; color: white;">Email</span>
+                </div>
+                <input id="email" type="text" class="form-control" aria-label="Enter Email" placeholder="Enter Email"
+                    name="email" required>
+            </div>
 
-            <label for="psw"><b>Password</b></label>
-            <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
-
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="background-color:dimgray; color: white;">Password</span>
+                </div>
+                <input id="psw" type="password" class="form-control" placeholder="Enter Password"
+                    aria-label="Enter Password" name="psw" required>
+            </div>
+           
             <button id="loginButton" type="button" class="btn loginbtn">Login</button>
             <p class="text-center">Don't have an acount? <a href="Registration.html"> Register</a>.</p>
 
@@ -149,8 +161,8 @@
         const data = await res.json()
         console.log("data", data)
         if (data['valid'] == true) {
-            setCookie('id',data['id'],1);
-            setCookie('name',data['name'],1);
+            setCookie('id', data['id'], 1);
+            setCookie('name', data['name'], 1);
             change_page();
         }
         else {
