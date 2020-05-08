@@ -46,11 +46,8 @@ $(document).ready(function() {
     $(document).on("click", function(event) {
         var text = event.target.textContent;
         var type = event.target.nodeName;
-        // console.log(text, type);
     });
 
-    // localStorage.setItem("sight", "Eiffel Towersa");
-    // localStorage.setItem("country", "France");
     var sight = localStorage.getItem("sight");
     var country = localStorage.getItem("country");
     country[0] = country[0] + 32;
@@ -66,7 +63,7 @@ $(document).ready(function() {
             alert("Please Login to be able to add review on the sight..");
             return ;
         }
-        const userName =getCookie('name') ;
+        const userName = getCookie('name') ;
         const userReview = $("#userReview").val();
 
         if (userReview == "") {
