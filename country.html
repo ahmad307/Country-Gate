@@ -4,20 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
     <title>Country Gate</title>
 
@@ -25,47 +18,48 @@
         body {
             /* background-image: url('img/background.jpg'); */
         }
-
+        
         .jumbotron {
             background: none
         }
-
+        
         .breadcrumb {
             background: none
         }
-
-        h1, a {
+        
+        h1,
+        a {
             font-family: Jost, sans-serif;
             color: #64a19d !important;
         }
-
+        
         label {
             font-family: Jost, sans-serif;
         }
-
+        
         button {
             font-family: Jost, sans-serif;
             background-color: #64a19d !important;
-            color: white !important; 
+            color: white !important;
             font-style: bold;
             border-style: none !important;
         }
-
+        
         .navbar {
             background-color: #64a19d;
             font-family: Arial, Helvetica, sans-serif;
             height: 3rem;
         }
-
+        
         #LogoutButton {
             margin-top: -1rem;
             font-size: large;
         }
-
+        
         .breadcrumb {
             font-style: bold !important;
         }
-
+        
         .header {
             font-size: 6.5rem;
             letter-spacing: 0.8rem;
@@ -74,7 +68,7 @@
             -webkit-background-clip: text;
             margin-top: 12rem;
         }
-
+        
         #main {
             background-image: url("img/background.jpg");
             height: 100%;
@@ -82,7 +76,7 @@
             background-position: center;
             object-fit: cover;
         }
-
+        
         #labelId {
             color: white;
         }
@@ -96,11 +90,11 @@
             <button id="LogoutButton" type="button" class="btn"></button>
         </div>
     </nav>
-    
+
     <!-- Page title -->
     <div id="main">
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">  
+            <div class="container">
                 <h1 class="header countryName text-center display-4" styles="height:20px;margin-bottom: 0px;font-weight:bold"></h1>
             </div>
         </div>
@@ -110,7 +104,9 @@
     <nav aria-label="breadcrumb" style="margin-top: 2rem;">
         <ol class="breadcrumb" display="inline-block;" style="margin-bottom:0px; margin-top:-2.5%; font-weight:bold;">
             <li class="breadcrumb-item" display="inline-block;"><a href="MainPage.html">Home</a></li>
-            <li class="breadcrumb-item" display="inline-block;"><a class="countryName"></a></li>
+            <li class="breadcrumb-item" display="inline-block;">
+                <a class="countryName"></a>
+            </li>
         </ol>
     </nav>
 
@@ -125,23 +121,18 @@
         <div id="Append"></div>
     </div>
 
-    
+
     <!-- pagination -->
     <div style="margin-left: auto;" class="text-xs-center">
 
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-                <li class="page-item"><a id="egypt" class="page-link" style="font-size: 22px;"
-                        href="country.html">Egypt</a></li>
-                <li class="page-item"><a id="france" class="page-link" style="font-size: 22px;"
-                        href=" country.html ">France</a></li>
-                <li class="page-item "><a id="rome " class="page-link " style="font-size: 22px;"
-                        href="country.html">Rome</a>
+                <li class="page-item"><a id="egypt" class="page-link" style="font-size: 22px;" href="country.html">Egypt</a></li>
+                <li class="page-item"><a id="france" class="page-link" style="font-size: 22px;" href=" country.html ">France</a></li>
+                <li class="page-item "><a id="rome" class="page-link " style="font-size: 22px;" href="country.html">Rome</a>
                 </li>
-                <li class="page-item"><a id="spain" class="page-link" style="font-size: 22px;"
-                        href=" country.html ">Spain</a></li>
-                <li class="page-item "><a id="germany " class="page-link " style="font-size: 22px;"
-                        href="country.html">Germany</a>
+                <li class="page-item"><a id="spain" class="page-link" style="font-size: 22px;" href=" country.html ">Spain</a></li>
+                <li class="page-item "><a id="germany" class="page-link " style="font-size: 22px;" href="country.html">Germany</a>
                 </li>
                 <li class="page-item">
                     <a id="russuia" class="page-link" style="font-size: 22px;" href=" country.html ">Russuia</a></li>
@@ -191,7 +182,7 @@
             "text": "Notre-Dame de Paris, referred to simply as Notre-Dame, is a medieval Catholic cathedral on the Île de la Cité in the 4th arrondissement of Paris. The cathedral was consecrated to the Virgin Mary and considered to be one of the finest examples of French Gothic architecture. Wikipedia"
         }],
         "spain": [{
-            "img": "img/Spain.png",
+            "img": "img/pyramids.jpg",
             "title": "Egyption Pyramides",
             "text": "The Pyramids of Giza are the largest and most recognizable pyramid structures in the world. They were built to honor certain Pharaohs of the fourth ruling dynasty of Egypt during a period known as the Old Kingdom.                       The Old Kingdom was the first great era of Egyptian civilization and lasted from 2686 to 2181 BCEThe Pyramids of Giza are the largest and most recognizable pyramid structures in the world.They were built to ",
             "country": "Spain"
@@ -213,8 +204,7 @@
             "text": "During Egypt's New Kingdom (1539-1075 B.C.), the valley became a royal burial ground for pharaohs such as Tutankhamun, Seti I, and Ramses II, as well as queens, high priests,and other elites of the 18th, 19th, and   20th dynasties.The tombs evidence elaborate preparations for the next world, in which humans were promised continuing life and pharaohs were expected to becom one with the gods. Mummification was used to preserve   the body so that the deceased's eternal soul would be able to reanimate it in the afterlife< "
         }],
 
-        "russuia": [
-        {
+        "russuia": [{
             "img": "img/RedSquare.jpg",
             "title": "Red Square",
             "text": "Red Square is a city square in Moscow, Russia. It separates the Kremlin, the former royal citadel and now the official residence of the President of Russia, from a historic merchant quarter known as Kitai-gorod. Red Square is often considered to be the central square of Moscow since the city's major streets, which connect to Russia's major highways, originate in the square. Wikipedia",
@@ -278,16 +268,20 @@
 
     }
 
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         var country = localStorage.getItem("country");
+        console.log(typeof(country))
+        if (country == "") {
+            country = "egypt";
+        }
         console.log(country)
 
         // Set header image
         document.getElementById("main").style.backgroundImage = `url("img/${country}.jpg")`;
 
 
-        $(document).on("click", function (event) {
+        $(document).on("click", function(event) {
             // Catches see more clicks and hides see more button
             if (event.target.innerHTML === "See More") {
                 $(event.target).hide();
@@ -295,13 +289,16 @@
 
             var text = event.target.textContent;
             var id = event.target.id;
-            // localStorage.setItem("country", id);
+            localStorage.setItem("country", id);
+
             localStorage.setItem("sight", text);
 
             console.log(id);
-            console.log(text);
+            //  console.log(text);
 
         });
+
+
 
         for (let i = 0; i < data[country].length; ++i) {
 
@@ -313,14 +310,14 @@
         $(".countryName").html(data[country][0]["country"]);
         // $('#main').append(`<div class="jumbotron jumbotron-fluid" >
         //     <div class="container">
-                
+
         //         <h1 class="display-4" class="text-center" style="height:20px;margin-bottom: 0px;font-weight:bold; color:blue">${data[country][0]["country"]}</h1>
         //     </div>
         // </div>
         // `);
 
 
-        for (let i = 0; i < data.egypt.length; ++i) {
+        for (let i = 0; i < data[country].length; ++i) {
             $("#Append").append(`
                 <div class="card border-dark mb-3" id="${[i]}" style="max-width:100%; margin: 5px;">
                     <div class="row no-gutters">
@@ -355,7 +352,6 @@
 
 <!--check cookies-->
 <script>
-
     function setCookie(name, value, daysToLive) {
         // Encode value in order to escape semicolons, commas, and whitespace
         var cookie = name + "=" + encodeURIComponent(value);
@@ -368,7 +364,7 @@
             document.cookie = cookie;
         }
     }
-    
+
     function getCookie(c_name) {
         var i, x, y, ARRcookies = document.cookie.split(";");
         for (i = 0; i < ARRcookies.length; i++) {
@@ -405,13 +401,12 @@
     }
 
     var logoutButton = document.getElementById("LogoutButton");
-    logoutButton.onclick = function () {
+    logoutButton.onclick = function() {
         console.log("edeloo");
         var currentName = logoutButton.innerText;
         if (currentName == "Login") {
             change_page();
-        }
-        else {
+        } else {
             setCookie('id', '-1', 1);
             setCookie('name', 'none', 1);
             window.location.reload();
