@@ -7,6 +7,42 @@ var data = {
             "Eiffel Tower4.jpg"
         ],
         "text": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Wikipedia"
+    },
+    "Louvre Museum": {
+        "images": [
+            "louvre1.jpg",
+            "louvre2.jpg",
+            "louvre3.jpeg",
+            "louvre4.jpeg"
+        ],
+        "text": "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement. Wikipedia"
+    },
+    "Cathédrale Notre-Dame de Paris": {
+        "images": [
+            "notredam1.jpeg",
+            "notredam2.jpeg",
+            "notredam3.jpeg",
+            "notredam4.jpeg",
+        ],
+        "text": "Notre-Dame de Paris, referred to simply as Notre-Dame, is a medieval Catholic cathedral on the Île de la Cité in the 4th arrondissement of Paris. The cathedral was consecrated to the Virgin Mary and considered to be one of the finest examples of French Gothic architecture. Wikipedia"
+    },
+    "Egyptian Pyramids": {
+        "images": [
+            "pyramids5.jpg",
+            "pyramids1.jpeg",
+            "pyramids2.jpeg",
+            "pyramids3.jpeg"
+        ],
+        "text": "The Great Pyramid of Giza is the oldest and largest of the three pyramids in the Giza pyramid complex bordering present-day Giza in Greater Cairo, Egypt. It is the oldest of the Seven Wonders of the Ancient World, and the only one to remain largely intact. Wikipedia"
+    },
+    "Egyptian Museum": {
+        "images": [
+            "egyptianmus1.jpeg",
+            "egyptianmus5.jpeg",
+            "egyptianmus2.jpg",
+            "egyptianmus3.jpg",
+        ],
+        "text": "The Museum of Egyptian Antiquities, known commonly as the Egyptian Museum or Museum of Cairo, in Cairo, Egypt, is home to an extensive collection of ancient Egyptian antiquities. It has 120,000 items, with a representative amount on display, the remainder in storerooms. Wikipedia"
     }
 }
 
