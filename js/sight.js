@@ -67,6 +67,7 @@ function heartFlip(check) {
 
 function fillPage(sight, country) {
     $("#cityName").html(country);
+    console.log(country);
     $(".sightName").html(sight);
     $("#sightDescription").html(data[sight]["text"]);
     $(".header").css("background", `linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 50%,rgba(22, 22, 22, 0.5) 75%, #161616 100%),`
@@ -106,17 +107,20 @@ $(document).ready(function() {
             window.alert("Kindly insert a valid review.")
             return;
         }
-        
+
         $("#reviews").append(`
-            <div class="col-xl-10 col-lg-5">
-                <div class="featured-text text-center text-lg-left">
+            <div class="media col-xl-10">
+                <div class="media-left featured-text">
+                    <img src="img/person.png" class="media-object">
+                </div>
+                <div class="media-body">
                     <h5>${userName}</h5>
-                    <p class="text-black-50 mb-0">
+                    <p class="text-black-50 mb-3">
                         ${userReview}
                     </p>
                 </div>
-            </div>`
-        );
+            </div>
+        `);
 
         // Close modal and clean input field
         $("#userReview").val("");

@@ -1,3 +1,11 @@
+.media img {
+    height: 4rem;
+}
+
+.media p {
+    font-size: larger;
+}
+
 h4 {
     font-family: Jost, sans-serif;
 }
