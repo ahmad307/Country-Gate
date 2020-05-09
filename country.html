@@ -127,7 +127,7 @@
 
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-                <li class="page-item"><a id="egypt" class="page-link" style="font-size: 22px;" href="country.html">Egypt</a></li>
+                <li class="page-item"><a id="egypt" class="page-link" style="font-size: 22px; " href="country.html">Egypt</a></li>
                 <li class="page-item"><a id="france" class="page-link" style="font-size: 22px;" href=" country.html ">France</a></li>
                 <li class="page-item "><a id="rome" class="page-link " style="font-size: 22px;" href="country.html">Rome</a>
                 </li>
@@ -303,6 +303,9 @@
                     </div>
             `);
         }
+        $('a.page-link#' + country).css({
+            'background-color': 'black'
+        });
 
     })
 </script>
