@@ -11,9 +11,8 @@ const { Pool, Client } = require('pg')
 
 var fs = require('fs')
 var http = require('http');
-const connStr = 'postgressql://postgres:22870253Mm@localhost:5432/ui_db'
-
-
+var password = process.env.POSTGRES_USER_PASSWORD;
+const connStr = `postgressql://postgres:${password}@127.0.0.1:5432/country_gate`;
 
 
 app.post('/login', (req, res) => {
@@ -56,12 +55,14 @@ app.post('/registration', (req, res) => {
   })
   client.connect()
   // get from db 
+  console.log("----------------");
+  console.log(req.body);
   const query = {
     text: 'select id from public."user" where email = $1',
     values: [req.body['email']],
   }
   client.query(query, (err, result_one) => {
-    console.log(err, result_one['rows'].length)
+    console.log(err, result_one)
     //client.end()
 
     if (result_one['rows'].length == 0) {
