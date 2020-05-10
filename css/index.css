@@ -1,0 +1,81 @@
+#userSalutation {
+    font-family: Jost, sans-serif;
+}
+
+.projectTitle {
+    font-family: "Jost", sans-serif;
+    font-size: 3.5rem;
+}
+
+.card {
+    border-style: none;
+    border-radius: 1rem;
+    margin-bottom: 3rem !important;
+}
+
+.card-header {
+    background-color: #64a19d !important;
+}
+
+.btn {
+    background-color: #64a19d !important;
+}
+
+.card:hover {
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+body {
+    background-image: url('../img/background.jpg');
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(200);
+}
+
+.carousel-control-next-icon {
+    margin-left: 4rem;
+}
+
+.carousel-control-prev-icon {
+    margin-right: 4rem;
+}
+
+.progress-bar {
+    background-color: #64a19d;
+}
+
+.topLeftCorner {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    color: white;
+    font-size: large;
+    font-family: Jost;
+    text-align: center;
+    /* line-height: 50px; */
+}
+
+.topRightCorner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+.jumbotron {
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.progress {
+    margin-top: -15px;
+}
